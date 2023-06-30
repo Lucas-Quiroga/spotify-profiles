@@ -1,0 +1,26 @@
+.dashboard-container {
+  margin-top: 20px;
+  border-radius: 10px;
+  background-color: #040404;
+  color: white;
+  padding: 1px;
+}
+
+.dashboard-card {
+  background-color: #1c1b1b;
+  border-radius: 10px;
+  border: black 2px solid;
+}
+
+.image-container {
+  max-width: 100%;
+  object-fit: cover;
+}
+
+.zoom {
+  transition: transform 0.3s ease;
+}
+
+.zoom:hover {
+  transform: scale(1.1);
+}
