@@ -43,7 +43,7 @@ interface Artist {
 }
 
 const api = "https://api.spotify.com";
-const apiBio = "http://ws.audioscrobbler.com";
+const apiBio = "https://ws.audioscrobbler.com";
 
 function App() {
   const [accessToken, setAccessToken] = useState("");
