@@ -68,7 +68,9 @@ function App() {
         headers: {
           "Content-Type": "application/x-www-form-urlencoded",
         },
-        body: `grant_type=client_credentials&client_id=${process.env.VITE_CLIENT_ID}&client_secret=${process.env.VITE_CLIENT_SECRET}`,
+        body: `grant_type=client_credentials&client_id=${
+          import.meta.env.VITE_CLIENT_ID
+        }&client_secret=${import.meta.env.VITE_CLIENT_SECRET}`,
       });
 
       const data = await response.json();
@@ -182,7 +184,9 @@ function App() {
   async function getApiBio() {
     try {
       const responseBio = await fetch(
-        `${apiBio}/2.0/?method=artist.getinfo&artist=${inputText}&api_key=${process.env.VITE_API_KEY}&format=json`,
+        `${apiBio}/2.0/?method=artist.getinfo&artist=${inputText}&api_key=${
+          import.meta.env.VITE_API_KEY
+        }&format=json`,
         {
           method: "GET",
         }
